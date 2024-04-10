@@ -41,6 +41,7 @@ public class OrderService {
                 .retrieve()
                 .bodyToMono(InventoryResponse[].class)
                 .block();
+        assert inventoryResponsesArray != null;
         boolean allProductsInStock = Arrays.stream(inventoryResponsesArray)
                 .allMatch(InventoryResponse::isInStock);
         if (allProductsInStock){
