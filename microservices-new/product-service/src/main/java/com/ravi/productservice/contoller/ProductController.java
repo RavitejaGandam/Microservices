@@ -29,4 +29,10 @@ public class ProductController {
        return productService.getAllProducts();
     }
 
+    @GetMapping("/bySkuCodes")
+    @ResponseStatus(HttpStatus.OK)
+    public List<ProductResponse> getProductsBySkuCodes(@RequestParam List<String> skucodes){
+        return productService.getProductsBySkuCodes(skucodes);
+    }
+
 }

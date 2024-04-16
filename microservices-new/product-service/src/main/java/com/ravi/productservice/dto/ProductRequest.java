@@ -14,6 +14,7 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 public class ProductRequest {
     private String name;
+    private String skuCode;
     private String description;
     private BigDecimal price;
 }

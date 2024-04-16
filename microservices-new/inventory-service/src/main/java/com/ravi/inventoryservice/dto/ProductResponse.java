@@ -1,26 +1,22 @@
-package com.ravi.productservice.model;
+package com.ravi.inventoryservice.dto;
 
-
-//import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.data.annotation.Id;
 
 import java.math.BigDecimal;
 
+@Data
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
-@Data
-@EntityScan
-public class Product {
+public class ProductResponse {
     @Id
     private String id;
     private String name;
-    private String skuCode;
     private String description;
     private BigDecimal price;
+
 }
